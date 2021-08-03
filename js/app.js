@@ -11,19 +11,23 @@
  * 
  * JS Standard: ESlint
  * 
-*/
+ */
 
 /**
  * Define Global Variables
  * 
-*/
+ */
+const navbar = document.getElementById("navbar__list");
 
+
+const toggle = document.querySelector(".menu__toggle");
+const menu = document.querySelector(".menu");
 
 /**
  * End Global Variables
  * Start Helper Functions
  * 
-*/
+ */
 
 
 
@@ -31,7 +35,7 @@
  * End Helper Functions
  * Begin Main Functions
  * 
-*/
+ */
 
 // build the nav
 
@@ -46,12 +50,10 @@
  * End Main Functions
  * Begin Events
  * 
-*/
+ */
 
 // Build menu 
 
 // Scroll to section on link click
 
 // Set sections as active
-
-
