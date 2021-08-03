@@ -16,6 +16,7 @@ body {
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
+    flex-wrap: wrap;
 }
 
 /* Typeography General*/
@@ -65,53 +66,54 @@ section {
 
 /* Navigation Styles*/
 
-.navbar__menu ul {
-    padding-left: 0;
+.navbar_menu ul {
     margin: 20px;
     text-align: right;
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.navbar__menu li {
-    display: inline-block;
+.navbar_menu li {
+    display: inherit;
 }
 
-.navbar__menu .menu__link {
+.navbar_menu .menu_link {
+    margin-top: 10px;
     display: block;
-    padding: 1em;
+    padding: 10px;
     font-weight: bold;
     text-decoration: none;
     color: #000;
 }
 
-.navbar__menu .menu__link:hover {
-    background: #333;
+.navbar_menu .menu_link:hover {
+    background: rgb(177, 177, 177);
     color: #fff;
     transition: ease 0.3s all;
 }
 
-.navbar__list {
+.navbar_list {
     padding: 10px;
 }
 
-.navbar__list:not(.button) a:hover, .navbar__list a:hover::after {
+.navbar_list:not(.button) a:hover, .navbar_list a:hover::after {
     color: #ccc;
 }
 
 .navbar_logo {
-    max-width: 100%;
+    max-width: 90%;
     flex-shrink: inherit;
 }
 
 .fa-bars {
-    color: #FFB35C
+    color: #FFB35C;
 }
 
 /* Header Styles */
 
-.page__header {
+.page_header {
     background: #fff;
     position: fixed;
     top: 0;
@@ -121,13 +123,13 @@ section {
 
 /* Footer Styles */
 
-.page__footer {
+.page_footer {
     background: #000;
     padding: 3em;
     color: #fff;
 }
 
-.page__footer p {
+.page_footer p {
     color: #fff;
 }
 
@@ -135,24 +137,23 @@ section {
 
 /* Landing Container Styles */
 
-.landing__container {
+.landing_container {
     padding: 1em;
     text-align: left;
 }
 
 @media only screen and (min-width: 35em) {
-    .landing__container {
+    .landing_container {
         max-width: 50em;
         padding: 4em;
     }
 }
 
-section:nth-of-type(even) .landing__container {
+section:nth-of-type(even) .landing_container {
     margin-right: 0;
     margin-left: auto;
     text-align: right;
 }
-
 
 /* ---- Theme State Rules ---- */
 
@@ -165,12 +166,12 @@ section.your-active-class {
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-section.your-active-class .landing__container::before {
+section.your-active-class .landing_container::before {
     opacity: 1;
     animation: rotate 4s linear 0s infinite forwards;
 }
 
-section.your-active-class .landing__container::after {
+section.your-active-class .landing_container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
 }
@@ -192,28 +193,28 @@ section.your-active-class .landing__container::after {
 
 @media screen and (max-width: 480px) {
     /* Mobile Menu */
-    .navbar__menu ul {
+    .navbar_menu ul {
         margin: 20px;
         text-align: right;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
         align-items: center;
-        justify-content: stretch;
+        justify-content: space-between;
+        padding-bottom: ;
     }
     .navbar_logo {
-        margin: auto;
-        padding-bottom: 20px;
+        max-width: 60%;
     }
-    .menu__toggle {
+    .menu_toggle {
         font-size: 40px;
     }
-    .navbar__menu .menu__link {
+    .navbar_menu .menu_link {
         width: 100%;
         text-align: center;
         display: none;
+        justify-content: space-between;
     }
-    .active .menu__link {
+    .active .menu_link {
         display: block;
     }
 }
@@ -222,28 +223,28 @@ section.your-active-class .landing__container::after {
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
     /* Tablet Menu */
-    .navbar__menu ul {
+    .navbar_menu ul {
         margin: 20px;
         text-align: right;
         display: flex;
         flex-wrap: wrap;
-        flex-direction: column;
         align-items: center;
-        justify-content: stretch;
+        justify-content: space-between;
+        padding-bottom: ;
     }
     .navbar_logo {
-        margin: auto;
-        padding-bottom: 20px;
+        max-width: 60%;
     }
-    .menu__toggle {
+    .menu_toggle {
         font-size: 40px;
     }
-    .navbar__menu .menu__link {
+    .navbar_menu .menu_link {
         width: 100%;
         text-align: center;
         display: none;
+        justify-content: space-between;
     }
-    .active .menu__link {
+    .active .menu_link {
         display: block;
     }
 }
@@ -251,17 +252,30 @@ section.your-active-class .landing__container::after {
 /* Small Screens - Laptops */
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-    /* // CSS rules */
+    /* Laptop Menu */
+    .navbar_menu li {
+        display: none;
+    }
+    .navbar_logo {
+        max-width: 45%;
+    }
 }
 
 /* Medium Screens - Desktops */
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
-    /* // CSS rules */
+    /* Desktop Menu*/
+    .navbar_menu li {
+        display: none;
+    }
+
 }
 
 /* Large Screens - Ultrawide Desktops */
 
 @media screen and (min-width: 1201px) and (min-width: 1201px) {
-    /* // CSS rules */
+    /* Ultrawide Menu */
+    .navbar_menu li {
+        display: none;
+    }
 }

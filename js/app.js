@@ -13,31 +13,40 @@
  * 
  */
 
-/**
- * Define Global Variables
- * 
- */
-const navbar = document.getElementById("navbar__list");
 
+// Define Global Variables
 
-const toggle = document.querySelector(".menu__toggle");
-const menu = document.querySelector(".menu");
+const sections = document.querySelectorAll('section');
+const navList = document.getElementById('navbar_list');
 
-/**
- * End Global Variables
- * Start Helper Functions
- * 
- */
+//  End Global Variables
 
 
 
-/**
- * End Helper Functions
- * Begin Main Functions
- * 
- */
+//  Start Helper Functions
 
-// build the nav
+
+// End Helper Functions
+
+
+
+
+// Begin Main Functions
+
+// End Main Functions
+
+
+// Build the nav
+
+// Hamburger Menu
+let navbar = document.querySelector(".navbar_menu");
+let navbarToggle = document.querySelector(".menu_toggle");
+let menuClose = document.querySelector(".menu_close");
+// Toggle menu
+navbarToggle.addEventListener("click", function(event){
+    navbar.classList.toggle("active");
+});
+
 
 
 // Add class 'active' to section when near top of viewport
@@ -49,7 +58,7 @@ const menu = document.querySelector(".menu");
 /**
  * End Main Functions
  * Begin Events
- * 
+ *
  */
 
 // Build menu 
