@@ -9,7 +9,8 @@
     <!-- Load Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Fira+Sans:900|Merriweather&display=swap" rel="stylesheet">
     <!-- Load Fontawesome Icons -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <!-- Load Styles -->
     <link href="css/styles.css" rel="stylesheet">
 </head>
@@ -17,17 +18,13 @@
 <body>
     <!-- HTML Follows BEM naming conventions 
   IDs are only used for sections to connect menu achors to sections -->
-  
+
     <header class="page_header">
         <div class="navbar_menu">
             <!-- Navigation starts as empty UL that will be populated with JS -->
-            <ul class="navbar_list">
-                <img src="images/DevineDesertsLogo.png" alt="" class="navbar_logo">
-                <li class="menu_toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
-                <li class="menu_link"><a href="#"></a>Wedding Cakes</a></li>
-                <li class="menu_link"><a href="#"></a>Birthday Cakes</a></li>
-                <li class="menu_link"><a href="#"></a>Cake Pops</a></li>
-                <li class="menu_link"><a href="#"></a>Macarons</a></li>
+            <img src="images/DevineDesertsLogo.png" alt="" class="navbar_logo">
+            <li class="menu_toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+            <ul id="navbar_list"></ul>
             </ul>
         </div>
 
@@ -37,7 +34,7 @@
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-        <section id="section1" data-nav="Section 1" class="your-active-class">
+        <section id="wedding_cakes" data-nav="Wedding Cakes" class="your-active-class">
             <div class="landing_container">
                 <h2>Wedding Cakes</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
@@ -56,7 +53,7 @@
                     porttitor tortor, eget elementum tortor mollis non.</p>
             </div>
         </section>
-        <section id="section2" data-nav="Section 2">
+        <section id="birthday_cakes" data-nav="Birthday Cakes">
             <div class="landing_container">
                 <h2>Birthday Cakes</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
@@ -75,7 +72,7 @@
                     porttitor tortor, eget elementum tortor mollis non.</p>
             </div>
         </section>
-        <section id="section3" data-nav="Section 3">
+        <section id="cake_pops" data-nav="Cake Pops">
             <div class="landing_container">
                 <h2>Cake Pops</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
@@ -94,7 +91,7 @@
                     porttitor tortor, eget elementum tortor mollis non.</p>
             </div>
         </section>
-        <section id="section4" data-nav="Section 4">
+        <section id="macarons" data-nav="Macarons">
             <div class="landing_container">
                 <h2>Macarons</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
