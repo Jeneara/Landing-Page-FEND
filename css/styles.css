@@ -11,11 +11,9 @@
 /* ---- Base Rules ---- */
 
 body {
-    background: rgb(136, 203, 171);
-    background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
+    background: rgb(255, 179, 92, 0.5);
     margin: 0;
     font-family: 'Merriweather', serif;
-    color: #fff;
     flex-wrap: wrap;
 }
 
@@ -24,7 +22,6 @@ body {
 h1 {
     font-family: 'Fira Sans', sans-serif;
     font-size: 3em;
-    margin: 2em 1rem;
 }
 
 @media only screen and (min-width: 35em) {
@@ -38,18 +35,18 @@ h2 {
     border-bottom: 1px solid #FFB35C;
     font-family: 'Oxygen', Sans-Serif;
     font-size: 3em;
-    color: #fff;
+    color: #444;
 }
 
 p {
     line-height: 1.6em;
-    color: #eee;
+    color: #444;
 }
 
 /* ---- Layout Rules ---- */
 
 main {
-    margin: 10vh 1em 10vh;
+    margin: 20vh 0vh 5vh;
 }
 
 .main-hero {
@@ -60,6 +57,9 @@ main {
 section {
     position: relative;
     min-height: 80vh;
+    margin: 20px;
+    border-radius: 10px;
+    background-position: center;
 }
 
 /* ---- Module Rules ---- */
@@ -96,9 +96,8 @@ section {
 }
 
 .navbar_menu .menu_link:hover {
-    background: rgb(177, 177, 177);
-    color: #fff;
-    transition: ease 0.3s all;
+    background-color: #eee;
+    border-radius: 10px;
 }
 
 .navbar_list {
@@ -118,6 +117,15 @@ section {
     color: #FFB35C;
 }
 
+.navbar_menu .menu_link.active {
+    background-color: FFB35C;
+    border-radius: 10px;
+}
+
+
+
+
+
 /* Header Styles */
 
 .page_header {
@@ -131,13 +139,14 @@ section {
 /* Footer Styles */
 
 .page_footer {
-    background: #000;
-    padding: 3em;
-    color: #fff;
+    background: #fff;
+    padding: 10px;
+    color: #eee;
+    text-align: center;
 }
 
 .page_footer p {
-    color: #fff;
+    color: #FFB35C;
 }
 
 /* ---- Theme Rules ---- */
@@ -147,11 +156,12 @@ section {
 .landing_container {
     padding: 1em;
     text-align: left;
+    
 }
 
 @media only screen and (min-width: 35em) {
     .landing_container {
-        max-width: 50em;
+        max-width: 500px;
         padding: 4em;
     }
 }
@@ -162,37 +172,18 @@ section:nth-of-type(even) .landing_container {
     text-align: right;
 }
 
-/* ---- Theme State Rules ---- */
 
-/* Section Active Styles */
-
-/* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
-
-section.your-active-class {
-    background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+.section_img {
+    width: 100%;
 }
 
-section.your-active-class .landing_container::before {
-    opacity: 1;
-    animation: rotate 4s linear 0s infinite forwards;
+.section_cont {
+    background-color: rgba(238, 238, 238, 0.75);
+    border-radius: 10px;
+    padding: 5px 20px 10px 20px;
 }
 
-section.your-active-class .landing_container::after {
-    opacity: 1;
-    animation: rotate 5s linear 0s infinite forwards reverse;
-}
 
-/* Section Active Styles Keyframe Animations */
-
-@keyframes rotate {
-    from {
-        transform: rotate(0deg) translate(-1em) rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg) translate(-1em) rotate(-360deg);
-    }
-}
 
 /* Media Queries */
 

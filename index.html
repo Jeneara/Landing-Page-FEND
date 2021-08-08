@@ -23,7 +23,7 @@
         <div class="navbar_menu">
             <!-- Navigation starts as empty UL that will be populated with JS -->
             <img src="images/DevineDesertsLogo.png" alt="" class="navbar_logo">
-            <li class="menu_toggle"><a href="#"><i class="fas fa-bars"></i></a></li>
+            <li class="menu_toggle"><i class="fas fa-bars"></i></a></li>
             <ul id="navbar_list"></ul>
             </ul>
         </div>
@@ -34,87 +34,91 @@
     a data attribute that will populate the li node.
     Adding more sections will automatically populate nav.
     The first section is set to active class by default -->
-        <section id="wedding_cakes" data-nav="Wedding Cakes" class="your-active-class">
+        <section id="wedding_cakes" data-nav="Wedding Cakes" style="background-image: url('images/weddingcake.jpg')"
+            class="your-active-class">
             <div class="landing_container">
-                <h2>Wedding Cakes</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
-                    pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-                    lacinia ex. Phasellus imperdiet porta orci
-                    eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum
-                    consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
-                    elit a pharetra. Duis lectus mi, aliquam
-                    in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum
-                    non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus.
-                    Sed congue et odio sed euismod.</p>
-
-                <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit,
-                    vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-                    consectetur porttitor. Suspendisse imperdiet
-                    porttitor tortor, eget elementum tortor mollis non.</p>
+                <div class="section_cont">
+                    <h2>Wedding Cakes</h2>
+                    <p class="section_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum
+                        metus faucibus lectus
+                        pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+                        lacinia ex. Phasellus imperdiet porta orci
+                        eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum
+                        consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus
+                        imperdiet
+                        elit a pharetra. Duis lectus mi, aliquam
+                        in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et
+                        elementum
+                        non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in
+                        tellus.
+                        Sed congue et odio sed euismod.</p>
+                </div>
             </div>
         </section>
-        <section id="birthday_cakes" data-nav="Birthday Cakes">
+        <section id="birthday_cakes" data-nav="Birthday Cakes" style="background-image: url('images/birthdaycake.jpg')">
             <div class="landing_container">
-                <h2>Birthday Cakes</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
-                    pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-                    lacinia ex. Phasellus imperdiet porta orci
-                    eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum
-                    consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
-                    elit a pharetra. Duis lectus mi, aliquam
-                    in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum
-                    non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus.
-                    Sed congue et odio sed euismod.</p>
-
-                <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit,
-                    vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-                    consectetur porttitor. Suspendisse imperdiet
-                    porttitor tortor, eget elementum tortor mollis non.</p>
+                <div class="section_cont">
+                    <h2>Birthday Cakes</h2>
+                    <p class="section_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum
+                        metus faucibus lectus
+                        pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+                        lacinia ex. Phasellus imperdiet porta orci
+                        eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum
+                        consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus
+                        imperdiet
+                        elit a pharetra. Duis lectus mi, aliquam
+                        in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et
+                        elementum
+                        non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in
+                        tellus.
+                        Sed congue et odio sed euismod.</p>
+                </div>
             </div>
         </section>
-        <section id="cake_pops" data-nav="Cake Pops">
+        <section id="cake_pops" data-nav="Cake Pops" style="background-image: url('images/cakepops.jpg')">
             <div class="landing_container">
-                <h2>Cake Pops</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
-                    pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-                    lacinia ex. Phasellus imperdiet porta orci
-                    eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum
-                    consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
-                    elit a pharetra. Duis lectus mi, aliquam
-                    in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum
-                    non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus.
-                    Sed congue et odio sed euismod.</p>
-
-                <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit,
-                    vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-                    consectetur porttitor. Suspendisse imperdiet
-                    porttitor tortor, eget elementum tortor mollis non.</p>
+                <div class="section_cont">
+                    <h2>Cake Pops</h2>
+                    <p class="section_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum
+                        metus faucibus lectus
+                        pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+                        lacinia ex. Phasellus imperdiet porta orci
+                        eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum
+                        consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus
+                        imperdiet
+                        elit a pharetra. Duis lectus mi, aliquam
+                        in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et
+                        elementum
+                        non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in
+                        tellus.
+                        Sed congue et odio sed euismod.</p>
+                </div>
             </div>
         </section>
-        <section id="macarons" data-nav="Macarons">
+        <section id="macarons" data-nav="Macarons" style="background-image: url('images/macarons.jpg')">
             <div class="landing_container">
-                <h2>Macarons</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum metus faucibus lectus
-                    pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
-                    lacinia ex. Phasellus imperdiet porta orci
-                    eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum
-                    consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus imperdiet
-                    elit a pharetra. Duis lectus mi, aliquam
-                    in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et elementum
-                    non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in tellus.
-                    Sed congue et odio sed euismod.</p>
-
-                <p>Aliquam a convallis justo. Vivamus venenatis, erat eget pulvinar gravida, ipsum lacus aliquet velit,
-                    vel luctus diam ipsum a diam. Cras eu tincidunt arcu, vitae rhoncus purus. Vestibulum fermentum
-                    consectetur porttitor. Suspendisse imperdiet
-                    porttitor tortor, eget elementum tortor mollis non.</p>
-            </div>
+                <div class="section_cont">
+                    <h2>Macarons</h2>
+                    <p class="section_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi fermentum
+                        metus faucibus lectus
+                        pharetra dapibus. Suspendisse potenti. Aenean aliquam elementum mi, ac euismod augue. Donec eget
+                        lacinia ex. Phasellus imperdiet porta orci
+                        eget mollis. Sed convallis sollicitudin mauris ac tincidunt. Donec bibendum, nulla eget bibendum
+                        consectetur, sem nisi aliquam leo, ut pulvinar quam nunc eu augue. Pellentesque maximus
+                        imperdiet
+                        elit a pharetra. Duis lectus mi, aliquam
+                        in mi quis, aliquam porttitor lacus. Morbi a tincidunt felis. Sed leo nunc, pharetra et
+                        elementum
+                        non, faucibus vitae elit. Integer nec libero venenatis libero ultricies molestie semper in
+                        tellus.
+                        Sed congue et odio sed euismod.</p>
+                </div>
         </section>
 
         </section>
     </main>
     <footer class="page_footer">
-        <p>&copy Udacity</p>
+        <p>&copy Stephanie Mason 2021</p>
     </footer>
     <!-- Javascript -->
     <script src="js/app.js"></script>

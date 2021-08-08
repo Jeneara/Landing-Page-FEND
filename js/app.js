@@ -14,58 +14,52 @@
  */
 
 
-// Define Global Variables
+/* Define Global Variables */
+
 const sections = document.querySelectorAll("section");
 const navList = document.querySelector("#navbar_list");
 
-//  End Global Variables
-
-//  Start Helper Functions
-
-// End Helper Functions
+/*  End Global Variables */
 
 
-// Begin Main Functions
+/* Begin Main Functions */
 
-// End Main Functions
-
-// Build the nav
-
-// Ref - https://knowledge.udacity.com/questions/457900
-
+// Build the navmenu
 function generateNavMenu() {
     //iterate over each section to generate it's own navigation item.
-    for (section of sections) {
+    for (let section of sections) {
+
         // create the <li> element
         let navItem = document.createElement('li');
+
         // create the <a> element
         let navItemLink = document.createElement('a');
+
+        // Assign the section id as the li id
+        navItemLink.id = section.getAttribute('id');
+
         // Create class name class = "menu_link"
         navItemLink.className = "menu_link";
-        // use the section data-nav to set the navItem title
+
+        // Use the section data-nav to set the navItem title
         navItemLink.innerHTML = section.getAttribute('data-nav');
-        // append the link to the navItem
+
+        // Append navItem to the navItemLink
         navItem.appendChild(navItemLink);
-        console.log(navItem); 
-        // append the link to the navList
+
+        // Append the link to the navList
         navList.appendChild(navItem);
+
+        // Add the event listener for the click and then scroll to section
+        navItem.addEventListener('click', (event) => {
+            event.preventDefault();
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: 'start'
+            });
+        });
     };
 };
-generateNavMenu();
-
-
-
-//Checking if heading click works
-
-const menuLinks = document.getElementsByClassName("menu_link");
-for (const menuLink of menuLinks) {
-    menuLink.addEventListener("click", function (event) {
-        console.log('The heading was clicked!'); 
-    });
-}
-
-// sections.scrollIntoView({behavior: "smooth"});  
-
 
 
 // Hamburger Menu
@@ -79,21 +73,45 @@ navbarToggle.addEventListener("click", function (event) {
 });
 
 
+// // Add class 'active' to section when near top of viewport
+function makeActive() {
+    for (section of sections) {
+        let activeBox = section.getBoundingClientRect();
+        if (activeBox.top < 300 && activeBox.bottom > 300) {
 
-// Add class 'active' to section when near top of viewport
+            // Get the section id
+            const sectionId = section.getAttribute("id");
+
+            // Apply active state on the current section 
+            section.classList.add('your-active-class');
+
+            // Apply active state on the corresponding navlink
+            document.querySelector(`#${sectionId}`).classList.add('active');
+
+            // Remove active state from other section and corresponding Nav link.          
+        } else {
+
+            // Get the section id
+            const sectionId = section.getAttribute("id");
+
+            // Remove active state
+            section.classList.remove('your-active-class');
+
+            // Remove active state on navLink
+            document.querySelector(`#${sectionId}`).classList.remove('active');
+        }
+    }
+}
+
+/* End Main Functions */
 
 
-// Scroll to anchor ID using scrollTO event
-
-
-/**
- * End Main Functions
- * Begin Events
- *
- */
+/*Begin Events */
 
 // Build menu 
+generateNavMenu();
 
-// Scroll to section on link click
-
-// Set sections as active
+// Make sections and navbar active
+document.addEventListener("scroll", function () {
+    makeActive();
+});
